@@ -1,0 +1,25 @@
+{
+  "useTabs": true,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "semi": false,
+  "printWidth": 100,
+  "overrides": [
+    {
+      "files": "*.svg",
+      "options": {
+        "parser": "html"
+      }
+    },
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ],
+  "plugins": [
+    "prettier-plugin-astro",
+    "prettier-plugin-tailwindcss"
+  ]
+}
