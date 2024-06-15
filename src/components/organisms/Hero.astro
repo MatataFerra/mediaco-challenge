@@ -1,0 +1,26 @@
+---
+import AppRating from "@components/molecules/Hero/AppRating.astro"
+import Service from "@components/molecules/Hero/Service.astro"
+---
+
+<section class="padding grid grid-cols-2 overflow-x-hidden">
+	<Service />
+	<AppRating />
+</section>
+
+<style>
+	section {
+		--gradient: rgba(42, 42, 43, 0.541);
+		background-image: url("/assets/technician-banner.webp"),
+			linear-gradient(to right, var(--gradient), var(--gradient)),
+			url("/assets/plumbing-cost-hydro-blog-cont-img.webp");
+		background-position:
+			right bottom,
+			center center,
+			left top;
+		background-repeat: no-repeat, no-repeat;
+		background-size: contain;
+		height: 100%;
+		min-height: 90dvh;
+	}
+</style>

@@ -1,0 +1,21 @@
+---
+import Card from "@atoms/Hero/Card.astro"
+import Content from "@atoms/Hero/Card/Content.astro"
+---
+
+<section class="col-start-2 m-8 grid h-fit grid-cols-3 gap-4 self-end justify-self-end">
+	<Card>
+		<Content slot="content" rating={4.9} platform="Facebook" />
+	</Card>
+	<Card background="bg-fire">
+		<Content slot="content" rating={3} platform="Goole" />
+	</Card>
+	<Card background="bg-banana">
+		<div slot="content" class="flex flex-col items-center justify-center">
+			<p class="font-serif text-7xl font-black text-owl">24h</p>
+			<p class="text-wrap text-center font-serif text-2xl font-black leading-none text-owl">
+				Emergency Services
+			</p>
+		</div>
+	</Card>
+</section>

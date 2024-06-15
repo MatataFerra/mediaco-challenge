@@ -1,0 +1,18 @@
+---
+interface Props {
+	title: string
+	description: string
+}
+
+const { title, description }: Props = Astro.props
+---
+
+<section class="flex items-center gap-4">
+	<div class="size-20 rounded-full bg-lake p-5">
+		<img src="/assets/plumbing-white.webp" alt="Plumbing icon white" />
+	</div>
+	<div class="flex flex-col text-primary">
+		<p class="text-2xl font-bold">{title}</p>
+		<p>{description}</p>
+	</div>
+</section>

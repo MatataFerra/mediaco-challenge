@@ -1,0 +1,42 @@
+---
+import Input from "@atoms/Input.astro"
+import PromotionDiscount from "@atoms/Query/PromotionDiscount.astro"
+---
+
+<article class="absolute -bottom-[70%] mx-auto my-0 h-fit w-[88%] 2xl:-bottom-[34%]">
+	<section class="space-y-12 bg-primary p-12 shadow-lg">
+		<div class="flex justify-between">
+			<p class="text-3xl font-bold text-owl">
+				Describe your <span class="text-lake">plumbing</span> requirement to get a quote
+			</p>
+			<div class="flex gap-20">
+				<div class="flex items-center gap-2">
+					<i class="fa fa-lock text-cricket"></i>
+					<p class="text-sm">Your information is 100% safe and secure</p>
+				</div>
+				<div class="flex items-center gap-2">
+					<i class="fa fa-lock text-cricket"></i>
+					<p class="text-sm">Your information is 100% safe and secure</p>
+				</div>
+			</div>
+		</div>
+		<form method="POST" class="grid w-full grid-cols-4 gap-4">
+			<Input type="text" placeholder="Name" />
+			<Input type="text" placeholder="Phone number" />
+			<Input type="text" placeholder="Email Address" />
+			<Input type="text" placeholder="Suburb" />
+			<Input type="text" placeholder="Service Type:" />
+			<Input type="text" placeholder="Describe your plumbing job" classes="col-span-2" />
+			<button class="w-full bg-lake p-4 font-semibold text-primary">Get a free quote</button>
+		</form>
+	</section>
+	<PromotionDiscount />
+</article>
+
+<script>
+	const form = document.querySelector("form")
+	form?.addEventListener("submit", (e) => {
+		e.preventDefault()
+		alert("Form submitted")
+	})
+</script>

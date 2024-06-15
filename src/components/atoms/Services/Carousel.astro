@@ -1,0 +1,28 @@
+---
+import aquamax from "@root/public/assets/aquamax.jpg"
+import dux from "@root/public/assets/DUX.jpg"
+import grohe from "@root/public/assets/grohe.png"
+import parisi from "@root/public/assets/parisi.jpg"
+import rheem from "@root/public/assets/rheem.png"
+import thermann from "@root/public/assets/thermann.png"
+import vulcan from "@root/public/assets/vulcan.jpg"
+import { Image } from "astro:assets"
+
+const images = [
+	{ src: aquamax, alt: "Aquamax" },
+	{ src: dux, alt: "DUX" },
+	{ src: grohe, alt: "Grohe" },
+	{ src: parisi, alt: "Parisi" },
+	{ src: rheem, alt: "Rheem" },
+	{ src: thermann, alt: "Thermann" },
+	{ src: vulcan, alt: "Vulcan" },
+]
+---
+
+<figure class="my-16 flex h-24 w-full items-center gap-8">
+	{
+		images.map(({ src, alt }) => (
+			<Image {src} {alt} class="aspect-[4/3] h-full w-full mix-blend-multiply" />
+		))
+	}
+</figure>

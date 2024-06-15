@@ -1,0 +1,14 @@
+---
+import Availability from "@atoms/Availability.astro"
+import Button from "@atoms/Header/Button.astro"
+import Links from "@atoms/Links.astro"
+---
+
+<nav class="flex h-full items-center gap-4">
+	<Links />
+	<div class="bg-primary/40 h-4/6 w-[1px] rotate-12 transform"></div>
+	<Availability />
+	<div class="bg-primary/40 h-4/6 w-[1px] rotate-12 transform"></div>
+	<Button background="bg-lake"> Get a free quote </Button>
+	<Button border="border-2 border-primary" background="bg-owl"> 1300 000 000 </Button>
+</nav>

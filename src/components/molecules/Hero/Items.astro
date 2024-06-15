@@ -1,0 +1,24 @@
+---
+import Item from "@atoms/Hero/Item.astro"
+
+const items = [
+	{
+		title: "Upfront pricing",
+		description: "Know the price of the job before we start",
+	},
+	{
+		title: "$0 Call out",
+		description: "No call out fees",
+	},
+	{
+		title: "$50 off for online bookings",
+		description: "Book online to receive a discount",
+	},
+]
+---
+
+<article class="mt-16">
+	<ul class="space-y-2">
+		{items.map((item) => <Item title={item.title} description={item.description} />)}
+	</ul>
+</article>

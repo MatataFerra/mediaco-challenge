@@ -1,0 +1,28 @@
+---
+interface Props {
+	rating?: number
+	name?: string
+	platform?: string
+}
+
+const { rating = 4.9, name = "Average Rating", platform = "Facebook" } = Astro.props
+---
+
+<p class="text-center font-serif text-7xl font-black text-primary">{rating.toFixed(1)}</p>
+<div class="flex flex-col items-center">
+	<div class="flex gap-1">
+		{
+			Array.from({ length: 5 }).map((_, i) => (
+				<span class={`fa fa-star ${rating >= i ? "checked" : ""}`} />
+			))
+		}
+	</div>
+	<p class="text-sm font-light text-primary">{name}</p>
+</div>
+<p class="text-center text-lg font-semibold text-primary">{platform}</p>
+
+<style>
+	.checked {
+		color: orange;
+	}
+</style>

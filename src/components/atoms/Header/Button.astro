@@ -1,0 +1,20 @@
+---
+interface Props {
+	border?: string
+	background?: string
+}
+
+const { border, background } = Astro.props
+---
+
+<section
+	class:list={[
+		"text-primary flex h-12 w-56 -skew-x-12 transform items-center justify-center font-bold",
+		background,
+		border,
+	]}
+>
+	<button class="skew-x-12 transform">
+		<slot />
+	</button>
+</section>

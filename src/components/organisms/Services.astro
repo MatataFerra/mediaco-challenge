@@ -1,0 +1,51 @@
+---
+import ServiceCard from "@atoms/Services/Card.astro"
+import Carousel from "@atoms/Services/Carousel.astro"
+
+const services: Array<{ description: string }> = [
+	{
+		description: "BLOCKED DRAINS",
+	},
+	{
+		description: "HOT WATER",
+	},
+	{
+		description: "LEAKING PIPES",
+	},
+	{
+		description: "GAS FITTING",
+	},
+	{
+		description: "LEAKING TAPS",
+	},
+	{
+		description: "PIPE RELINING",
+	},
+	{
+		description: "LEAKING TOILETS",
+	},
+	{
+		description: "LEAK DETECTION",
+	},
+]
+---
+
+<section class="padding h-full bg-milk pb-1 pt-64">
+	<div class="space-y-4">
+		<h2 class="text-center text-8xl font-black text-owl">
+			Plumbing <span class="text-lake">services</span> we offer
+		</h2>
+		<p class="my-o mx-auto w-7/12 text-center text-2xl">
+			We are industry leaders providing quality plumbing, drainage, hot water, and roofing-related
+			services to our Community of Customers.
+		</p>
+	</div>
+	<div class="my-16 grid grid-cols-4 gap-8">
+		{services.map((service) => <ServiceCard description={service.description} />)}
+	</div>
+	<article class="my-8 flex w-full items-center">
+		<p class="w-2/4 text-3xl font-bold">We use well known brands including</p>
+		<div class="h-[1px] w-full bg-slate-700"></div>
+	</article>
+	<Carousel />
+</section>

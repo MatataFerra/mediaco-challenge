@@ -1,0 +1,24 @@
+---
+import type { BackgroundColor } from "@lib/types"
+
+interface Props {
+	background?: BackgroundColor
+	classes?: string
+}
+
+const { background, classes } = Astro.props
+---
+
+<article
+	class:list={[
+		"mx-auto my-0 h-40 w-64 -skew-x-6 transform self-center p-4 2xl:h-60 2xl:w-64",
+		background ? background : "bg-lake",
+		classes,
+	]}
+>
+	<div
+		class="relative flex size-full skew-x-6 transform flex-col items-center justify-center gap-2 p-2 after:absolute after:inset-0 after:-skew-x-6 after:transform after:border-[6px] after:border-dashed after:border-primary"
+	>
+		<slot />
+	</div>
+</article>
